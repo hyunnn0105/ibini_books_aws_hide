@@ -12,24 +12,24 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class PlatformApiControllerTest {
 
-    @Autowired
-    PlatformService platformService;
+//     @Autowired
+//     PlatformService platformService;
     
-    @Test
-    @DisplayName("선택한 플랫폼 아이디의 값을 수정해야 한다")
-    void controllerModiTest(){
-        String account = "ibini";
-        int platformId = 7;
-        PlatformDomain onePlatform = platformService.findOnePlatform(platformId);
-        onePlatform.setPlatformId(onePlatform.getPlatformId());
-        onePlatform.setPlatformName("hahaha");
-        onePlatform.setPlatformFontColor("#000");
-        onePlatform.setPlatformBgColor("#fff");
-        onePlatform.setAccount(account);
+//     @Test
+//     @DisplayName("선택한 플랫폼 아이디의 값을 수정해야 한다")
+//     void controllerModiTest(){
+//         String account = "ibini";
+//         int platformId = 7;
+//         PlatformDomain onePlatform = platformService.findOnePlatform(platformId);
+//         onePlatform.setPlatformId(onePlatform.getPlatformId());
+//         onePlatform.setPlatformName("hahaha");
+//         onePlatform.setPlatformFontColor("#000");
+//         onePlatform.setPlatformBgColor("#fff");
+//         onePlatform.setAccount(account);
 
-        System.out.println("onePlatform = " + onePlatform);
+//         System.out.println("onePlatform = " + onePlatform);
 
-        boolean b = platformService.modifyPlatform(onePlatform);
-        assertTrue(b);
-    }
+//         boolean b = platformService.modifyPlatform(onePlatform);
+//         assertTrue(b);
+//     }
 }
