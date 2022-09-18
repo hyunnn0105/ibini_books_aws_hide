@@ -15,82 +15,82 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @SpringBootTest
 class PostMarkMapperTest {
 
-    @Autowired
-    PostMarkMapper postMarkMapper;
+//     @Autowired
+//     PostMarkMapper postMarkMapper;
 
-    @Test
-    @DisplayName("마크 정보가 DB에 저장되어야 한다.")
-    void saveTest() {
+//     @Test
+//     @DisplayName("마크 정보가 DB에 저장되어야 한다.")
+//     void saveTest() {
 
-        PostMark postMark = new PostMark();
-        postMark.setPostNo(1L);
-        postMark.setEpisodeNo(4L);
-        postMark.setContent("4회차의 북마크");
+//         PostMark postMark = new PostMark();
+//         postMark.setPostNo(1L);
+//         postMark.setEpisodeNo(4L);
+//         postMark.setContent("4회차의 북마크");
 
-        postMarkMapper.save(postMark);
-    }
+//         postMarkMapper.save(postMark);
+//     }
 
-    @Test
-    @DisplayName("특정 마크를 조회해야 한다.")
-    void findOneTest() {
+//     @Test
+//     @DisplayName("특정 마크를 조회해야 한다.")
+//     void findOneTest() {
 
-        PostMark postMark = postMarkMapper.findOne(7L);
+//         PostMark postMark = postMarkMapper.findOne(7L);
 
-        assertEquals("2회차의 수정된 북마크", postMark.getContent());
-    }
+//         assertEquals("2회차의 수정된 북마크", postMark.getContent());
+//     }
 
-    @Test
-    @DisplayName("마크 내용과 수정일자를 수정해야 한다.")
-    void modifyTest() {
+//     @Test
+//     @DisplayName("마크 내용과 수정일자를 수정해야 한다.")
+//     void modifyTest() {
 
-        long markNo = 8L;
+//         long markNo = 8L;
 
-        PostMark postMark = new PostMark();
-        postMark.setEpisodeNo(4L);
-        postMark.setContent("4회차의 수정된 북마크");
-        postMark.setMarkNo(markNo);
+//         PostMark postMark = new PostMark();
+//         postMark.setEpisodeNo(4L);
+//         postMark.setContent("4회차의 수정된 북마크");
+//         postMark.setMarkNo(markNo);
 
-        postMarkMapper.modify(postMark);
+//         postMarkMapper.modify(postMark);
 
-        PostMark modPostMark = postMarkMapper.findOne(markNo);
+//         PostMark modPostMark = postMarkMapper.findOne(markNo);
 
-        assertEquals("4회차의 수정된 북마크", modPostMark.getContent());
-    }
+//         assertEquals("4회차의 수정된 북마크", modPostMark.getContent());
+//     }
 
-    @Test
-    @DisplayName("마크가 삭제되어야 한다.")
-    void removeTest() {
+//     @Test
+//     @DisplayName("마크가 삭제되어야 한다.")
+//     void removeTest() {
 
-        boolean delFlag = postMarkMapper.remove(6L);
+//         boolean delFlag = postMarkMapper.remove(6L);
 
-        assertTrue(delFlag);
-    }
+//         assertTrue(delFlag);
+//     }
 
-    @Test
-    @DisplayName("포스트에 달린 마크가 전체 삭제되어야 한다.")
-    void removeAllTest() {
+//     @Test
+//     @DisplayName("포스트에 달린 마크가 전체 삭제되어야 한다.")
+//     void removeAllTest() {
 
-        boolean delFlag = postMarkMapper.removeAll(1L);
+//         boolean delFlag = postMarkMapper.removeAll(1L);
 
-        assertTrue(delFlag);
-    }
+//         assertTrue(delFlag);
+//     }
 
-    @Test
-    @DisplayName("특정 포스트의 마크를 전체 조회하여야 한다.")
-    void findAllTest() {
+//     @Test
+//     @DisplayName("특정 포스트의 마크를 전체 조회하여야 한다.")
+//     void findAllTest() {
 
-        List<PostMark> postMarkList = postMarkMapper.findAll(1L);
-        postMarkList.forEach(System.out::println);
+//         List<PostMark> postMarkList = postMarkMapper.findAll(1L);
+//         postMarkList.forEach(System.out::println);
 
-        assertEquals(3, postMarkList.size());
-    }
+//         assertEquals(3, postMarkList.size());
+//     }
 
-    @Test
-    @DisplayName("특정 게시물의 전체 마크 수가 조회되어야 한다.")
-    void getPostMarkCountTest() {
+//     @Test
+//     @DisplayName("특정 게시물의 전체 마크 수가 조회되어야 한다.")
+//     void getPostMarkCountTest() {
 
-        int totalCount = postMarkMapper.getPostMarkCount(1L);
+//         int totalCount = postMarkMapper.getPostMarkCount(1L);
 
-        assertEquals(2, totalCount);
-    }
+//         assertEquals(2, totalCount);
+//     }
 }
