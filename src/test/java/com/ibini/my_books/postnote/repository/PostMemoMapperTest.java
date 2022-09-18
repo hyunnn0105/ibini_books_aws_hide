@@ -15,80 +15,80 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @SpringBootTest
 class PostMemoMapperTest {
 
-    @Autowired
-    PostMemoMapper postMemoMapper;
+//     @Autowired
+//     PostMemoMapper postMemoMapper;
 
-    @Test
-    @DisplayName("메모 정보가 DB에 저장되어야 한다.")
-    void saveTest() {
+//     @Test
+//     @DisplayName("메모 정보가 DB에 저장되어야 한다.")
+//     void saveTest() {
 
-        PostMemo postMemo = new PostMemo();
-        postMemo.setPostNo(1L);
-        postMemo.setContent("메모6");
+//         PostMemo postMemo = new PostMemo();
+//         postMemo.setPostNo(1L);
+//         postMemo.setContent("메모6");
 
-        postMemoMapper.save(postMemo);
-    }
+//         postMemoMapper.save(postMemo);
+//     }
 
-    @Test
-    @DisplayName("특정 메모를 조회해야 한다.")
-    void findOneTest() {
+//     @Test
+//     @DisplayName("특정 메모를 조회해야 한다.")
+//     void findOneTest() {
 
-        PostMemo postMemo = postMemoMapper.findOne(1L);
+//         PostMemo postMemo = postMemoMapper.findOne(1L);
 
-        assertEquals("메모1", postMemo.getContent());
-    }
+//         assertEquals("메모1", postMemo.getContent());
+//     }
 
-    @Test
-    @DisplayName("메모 내용과 수정일자를 수정해야 한다.")
-    void modifyTest() {
+//     @Test
+//     @DisplayName("메모 내용과 수정일자를 수정해야 한다.")
+//     void modifyTest() {
 
-        long memoNo = 1L;
+//         long memoNo = 1L;
 
-        PostMemo postMemo = new PostMemo();
-        postMemo.setContent("메모1 수정");
-        postMemo.setMemoNo(memoNo);
+//         PostMemo postMemo = new PostMemo();
+//         postMemo.setContent("메모1 수정");
+//         postMemo.setMemoNo(memoNo);
 
-        postMemoMapper.modify(postMemo);
+//         postMemoMapper.modify(postMemo);
 
-        PostMemo modPostMemo = postMemoMapper.findOne(memoNo);
+//         PostMemo modPostMemo = postMemoMapper.findOne(memoNo);
 
-        assertEquals("메모1 수정", modPostMemo.getContent());
-    }
+//         assertEquals("메모1 수정", modPostMemo.getContent());
+//     }
 
-    @Test
-    @DisplayName("메모가 삭제되어야 한다.")
-    void removeTest() {
+//     @Test
+//     @DisplayName("메모가 삭제되어야 한다.")
+//     void removeTest() {
 
-        boolean delFlag = postMemoMapper.remove(3L);
+//         boolean delFlag = postMemoMapper.remove(3L);
 
-        assertTrue(delFlag);
-    }
+//         assertTrue(delFlag);
+//     }
 
-    @Test
-    @DisplayName("포스트에 달린 메모가 전체 삭제되어야 한다.")
-    void removeAllTest() {
+//     @Test
+//     @DisplayName("포스트에 달린 메모가 전체 삭제되어야 한다.")
+//     void removeAllTest() {
 
-        boolean delFlag = postMemoMapper.removeAll(1L);
+//         boolean delFlag = postMemoMapper.removeAll(1L);
 
-        assertTrue(delFlag);
-    }
+//         assertTrue(delFlag);
+//     }
 
-    @Test
-    @DisplayName("특정 게시물의 메모를 전체 조회하여야 한다.")
-    void findAllTest() {
+//     @Test
+//     @DisplayName("특정 게시물의 메모를 전체 조회하여야 한다.")
+//     void findAllTest() {
 
-        List<PostMemo> postMemoList = postMemoMapper.findAll(1L);
-        postMemoList.forEach(System.out::println);
+//         List<PostMemo> postMemoList = postMemoMapper.findAll(1L);
+//         postMemoList.forEach(System.out::println);
 
-        assertEquals(3, postMemoList.size());
-    }
+//         assertEquals(3, postMemoList.size());
+//     }
 
-    @Test
-    @DisplayName("특정 게시물의 전체 메모 수가 조회되어야 한다.")
-    void getPostMemoCountTest() {
+//     @Test
+//     @DisplayName("특정 게시물의 전체 메모 수가 조회되어야 한다.")
+//     void getPostMemoCountTest() {
 
-        int totalCount = postMemoMapper.getPostMemoCount(1L);
+//         int totalCount = postMemoMapper.getPostMemoCount(1L);
 
-        assertEquals(3, totalCount);
-    }
+//         assertEquals(3, totalCount);
+//     }
 }
