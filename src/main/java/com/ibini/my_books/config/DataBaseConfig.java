@@ -21,7 +21,7 @@ public class DataBaseConfig {
 
         // 공용 설정
         config.setUsername("ibini");
-        config.setPassword("mariadb");
+        config.setPassword("mariadb1234");
         config.setJdbcUrl("jdbc:mariadb://ibini-books-database.cjasgvddbge1.ap-northeast-2.rds.amazonaws.com");
         config.setDriverClassName("org.mariadb.jdbc.Driver");
 
