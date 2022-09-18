@@ -4,6 +4,8 @@ plugins {
 	id 'java'
 	id 'war'
 }
+bootWar.enabled = false;
+war.enabled = true;
 
 group = 'com.ibini'
 version = '0.0.1-SNAPSHOT'
@@ -61,5 +63,6 @@ dependencies {
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+//	useJUnitPlatform()
+	enclude '**/*'
 }
