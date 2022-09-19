@@ -22,10 +22,10 @@ public class DataBaseConfig {
     @Value("${aws.rds_user_name}")
     private String username;
 
-    @Value("{aws.rds_password}")
+    @Value("${aws.rds_password}")
     private String password;
 
-    @Value("{aws.rds_url}")
+    @Value("${aws.rds_url}")
     private String url;
 
     // DB접속 정보 설정 (DataSource설정)
