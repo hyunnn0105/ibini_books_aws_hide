@@ -4,6 +4,9 @@
 - 1차 목표로는 원하는 도서의 정보와 사용자가 읽고 있는 정보를 기록하고 조회하는 것으로 도서 검색 api를 적용해보고자 합니다.
 - 깔쌈하게 멋진 프로그램 만들어보겠습니다 많관부!
 
+# ibini books 기능 페이지 보기
+https://docs.google.com/presentation/d/1bIZxAZr45jTpNuS_EMQ8hjk_IvUyIo1pvHZyJ_6AFQE/edit?usp=sharing
+
 --------------------------------------------------------------------------------------------------
 
 # application.properties 설정
